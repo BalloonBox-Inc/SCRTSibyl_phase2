@@ -19,19 +19,30 @@ Phase 2 of SCRTSibyl features the following extensions:
 
  - **Expand validator options**: we will integrate through the Binance API. Binance is a well-established and growing crypto exchange platform and we want to allow users who don't own a wallet in Coinbase the chance to get their score calculated by connecting their Binance account instead. Thus, users have now the choice to connect either their Coinbase account, their Binance account, or both. 
  
+ - **Add credit score history**: a user's score may change and improve over time and we want to give users with a positive pedigree the possibility to demonstrate the improvement in their credit history. We'll implement a query function to fetch the chronologically ordered list of their credit scores with associated timestamps. Users will be in control of their credit score history and, if they so choose, will be able to share it with third parties.
+
  - **Allow smart currency selection**: the user interacts with the SCRTSibyl UI to custom-choose the currency (fiat or crypto) he prefers to receive a loan in. The Dapp will automatically standardize all the metrics in the credit scoring algorithm to the chosen currency. The range of currencies will be initially limited to a predetermined set (USD, EUR, BTC, ETX, USDT, USDC, BNB, XRP). We will integrate with [CoinAPI.io](https://github.com/coinapi/coinapi-sdk) to perform real-time currency conversion.
  
- - **Improve risk indicators**: we will increase the output accuracy of the credit scoring model by returning low/medium/high-risk indicators on the scoring bin assigned to the user. For example, imagine a user qualified for a mini-loan ranging from USD 5-10K. This scoring bin is rather broad, and a user may be very well suited to receive a loan of USD 6K but may struggle to pay back a loan worth USD 9K. Thus, we'll develop three categories to assess the risk level for given users to receive their associated loans. The same user qualifying for USD 5-10K may be a low-risk user in receiving a USD 6K loan but is a high-risk user for a USD 9K loan. 
- 
- - **Add credit score history**: a user's score may change and improve over time and we want to give users with a positive pedigree the possibility to demonstrate the improvement in their credit history. We'll implement a query function to fetch the chronologically ordered list of their credit scores with associated timestamps. Users will be in control of their credit score history and, if they so choose, will be able to share it with third parties.
+ - **Improve risk indicators**: we will increase the output accuracy of the credit scoring model by returning low/medium/high-risk indicators on the scoring bin assigned to the user. For example, imagine a user qualified for a mini-loan ranging from USD 5-10K. This scoring bin is rather broad, and a user may be very well suited to receive a loan of USD 6K but may struggle to pay back a loan worth USD 9K. Thus, we'll develop three categories to assess the risk level for given users to receive their associated loans. The same user qualifying for USD 5-10K may be a low-risk user in receiving a USD 6K loan but is a high-risk user for a USD 9K loan.
 
 ## Detailed Product Description
 
-### Components
+For a detailed description of the architecture and components of the model, please refer to the [phase 1 here.](https://github.com/BalloonBox-Inc/SCRTnetwork_oracle/blob/main/SCRTSybil.md#detailed-product-description)
 
-## Go-to-Market Plan
+## Go-to-Market (GTM) Plan
+
+As part of the strategy of gaining more traffic and user adoption to Secret Network, we are expanding the access channels to SCRT Sybil credit scoring tool, improving the user experience, and increasing the loan range eligibility. So that, the GTM plan consists of:
+
+1. User adoption: integrating with Binance will bring many more users since it holds more than 600 cryptocurrencies and it is one of the most popular and largest cryptocurrency exchangers.
+
+2. User experience: allowing users to keep tracking their credit score history and selecting different currencies to get loans will enhance the whole experience by providing more control to user's own decisions.
+
+3. User loan range: refining the accuracy of the credit score will allow the initial P2P micro-lending loans to increase to up to USD 100,000.
+
+We believe in the value of having a public network with the option and flexibility of data encryption and ultimately believe that mainstream tools for financial services like credit scores will be of the first major requirements for service providers on Secret Network.
 
 ## Value Capture for Secret Network Ecosystem
+
 
 ## Company
 Company Website - Official Repository
@@ -100,7 +111,7 @@ We would be willing to consider part payment (up to 50%) in SCRT, BTC or ETH. Th
 | 0b. | Documentation | We will provide inline documentation of the code. |
 | 0c. | Test Guide | Run unit tests to ensure functionality and robustness of core functions (~70%). |
 | 1. | ML Module - Deploy | Train, test, deploy the new ML model and compute credit scores. |
-| 2. | Contract | Execute the smart contract, written in Rust, to encrypt the calculated credit score to SCRT Network blockchain. |
+| 2. | Contract | Execute the smart contract, written in Rust, to encrypt the calculated credit score to Secret Network blockchain. |
 
 ### Milestone 3 - WebApp: Framework + UI 
 - **Estimated duration:** Week 11-14
@@ -111,16 +122,15 @@ We would be willing to consider part payment (up to 50%) in SCRT, BTC or ETH. Th
 | 0a. | License | Apache 2.0 |
 | 0b. | Documentation | We will provide inline documentation of the code for the WebApp framework. |
 | 1. | Framework | Implement SCRT wallet Login, personal info input, hover+select+OAuth2 in chosen validator |
-
-| 3. | UI Module | Design the UI flow for retrieving the score history. | 
-| 4. | UI Module | WebApp aesthetics and functionalitiy refinements. |
-| 5. | Tutorial | We will publish a video tutorial that walks a user through the SCRTSybil WebApp instructing them on the new features. | 
+| 2. | UI Module | Design the UI flow for retrieving the score history. | 
+| 3. | UI Module | WebApp aesthetics and functionalitiy refinements. |
+| 4. | Tutorial | We will publish a video tutorial that walks a user through the SCRTSybil WebApp instructing them on the new features. | 
 
 ## Additional Information
 
 ### Why SCRT?
 
-1. **How did you hear about the SCRT Network Grants?** We have been collaborating with the SCRT Labs Team for the last 4 months and we are just about to complete and release the very first Credit Score Oracle we developed for the Secret Network.
+1. **How did you hear about the Secret Network grants?** We have been collaborating with the SCRT Labs Team for the last 4 months and we are just about to complete and release the very first Credit Score Oracle we developed for the Secret Network.
 
 2. **Have you ever applied for other grants?** Yes, this is a follow-up grant to expand the work we completed after the first SCRT grant we received in January 2022.
  
