@@ -16,7 +16,6 @@ In phase 2, we want to both expand our use case including loans of USD +25K, but
 ## Problem / Solution
 
 Phase 2 of SCRTSibyl features the following extensions:
- - **Expand wallet options**: we will build an integration through the novel Citadel.One Secret wallet. The user can then choose to authenticate into SCRTSibyl through their preferred wallet (Keplr or Citadel).
 
  - **Expand validator options**: we will integrate through the Binance API. Binance is a well-established and growing crypto exchange platform and we want to allow users who don't own a wallet in Coinbase the chance to get their score calculated by connecting their Binance account instead. Thus, users have now the choice to connect either their Coinbase account, their Binance account, or both. 
  
@@ -112,7 +111,7 @@ We would be willing to consider part payment (up to 50%) in SCRT, BTC or ETH. Th
 | 0a. | License | Apache 2.0 |
 | 0b. | Documentation | We will provide inline documentation of the code for the WebApp framework. |
 | 1. | Framework | Implement SCRT wallet Login, personal info input, hover+select+OAuth2 in chosen validator |
-| 2. | Integration | Build Citadel.One integration. |
+
 | 3. | UI Module | Design the UI flow for retrieving the score history. | 
 | 4. | UI Module | WebApp aesthetics and functionalitiy refinements. |
 | 5. | Tutorial | We will publish a video tutorial that walks a user through the SCRTSybil WebApp instructing them on the new features. | 
