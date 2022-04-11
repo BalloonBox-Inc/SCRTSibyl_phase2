@@ -1,33 +1,33 @@
 # Team Name: BalloonBox
 
 ## Project Description
-Project name: SCRTSibyl_phase2
+Project name: **SCRTSibyl_phase2**
 
 SCRTSybil is an oracle for credit score checks developed through an initial Secret Network grant. This is an application to fund a phase #2 expansion of SCRTSibyl through a second grant.
 
-The SCRTSibyl Dapp targets a specific use case: P2P micro-lending, namely facilitating lending and borrowing of microloans ranging between USD 1-25K. As such, the Dapp is already able to compute credit scores to validate users' credibility and to determine how much of a loan (in USD) a user qualifies for.
+The SCRTSibyl dApp targets a specific use case: P2P micro-lending, namely facilitating lending and borrowing of microloans ranging between USD 1-25K. As such, the dApp is already able to compute credit scores, to validate users' credibility, and to determine the loan size (in USD) a user qualifies for.
 
-The oracle runs a credit score check on either the user's preferred bank account (integrating through Plaid API) or the user's Coinbase account (integrating through Coinbase API). The credit check assesses the user's financial health and predicts whether the user can pay back their micro-loan. The Dapp then executes a smart contract to write and store the calculated score into the Secret Network blockchain.
+The oracle runs a credit score check on either the user's preferred bank account (integrating through Plaid API) or the user's Coinbase account (integrating through Coinbase API). The credit check assesses the user's financial health and predicts whether the user can pay back their micro-loan. The dApp then executes a smart contract to write and store the calculated score onto the Secret Network blockchain.
 
-Throughout the process, users are in control of their own data, which is securely stored on-chain through the privacy-preserving Secret Network protocols. Users have even more control over their own data: they can view his score at any time through a read-only secret and costless permission key; they can issue viewing keys by paying a gas fee, to then share the key with third parties issuing them a load; lastly, they can revoke the issued viewing keys by running a state-changing function in the smart contract at the cost of a gas fee.
+Throughout the process, users are in control of their own data, which is securely stored on-chain through the privacy-preserving Secret Network protocols. Users have even more control over their own data: they can view their score at any time through a read-only secret and costless permission key; they can issue viewing keys by paying a gas fee, to then share the key with third parties issuing them a loan; lastly, they can revoke the issued viewing keys by running a state-changing function in the smart contract at the cost of a gas fee.
 
-In phase 2, we want to both expand our use case including loans of USD +25K, but also increase user adoption of the Dapp, by integrating with new data validators, authenticating through different wallets, and allowing the user to self-select the loan currency. We want SCRTSibyl to be able to cater to a wide loan range and for the Dapp to be accessible for an increasingly large pool of crypto investors.
+In phase 2, we want to both expand our use case including loans of +25K USD, but also increase user adoption of the dApp, by integrating with new data validators and allowing the user to self-select the loan currency. We want SCRTSibyl to be able to cater to a wide loan range and for the dApp to be accessible for an increasingly large pool of crypto investors.
 
-## Problem / Solution
+## Problem / Solution :bulb:
 
 Phase 2 of SCRTSibyl features the following extensions:
 
- - **Expand validator options**: we will integrate through the Binance API. Binance is a well-established and growing crypto exchange platform and we want to allow users who don't own a wallet in Coinbase the chance to get their score calculated by connecting their Binance account instead. Thus, users have now the choice to connect either their Coinbase account, their Binance account, or both. 
+ - **Expand validator options**: we will integrate with the Binance API. Binance is a well-established and growing crypto exchange platform and we want to allow users who don't own a wallet in Coinbase the chance to get their score calculated by connecting their Binance account instead. Thus, users have now the choice to connect either their Coinbase account, their Binance account, or their traditional bank account.
  
- - **Add credit score history**: a user's score may change and improve over time and we want to give users with a positive pedigree the possibility to demonstrate the improvement in their credit history. We'll implement a query function to fetch the chronologically ordered list of their credit scores with associated timestamps. Users will be in control of their credit score history and, if they so choose, will be able to share it with third parties.
+ - **Add credit score history**: a user's score may change and improve over time and we want empowers users with a positive pedigree to demonstrate the improvement in their credit history. We'll implement a query function to fetch the chronologically ordered list of their credit scores with associated timestamps. Users will be in control of their credit score history and, if they so choose, will be able to share it with third parties.
 
- - **Allow smart currency selection**: the user interacts with the SCRTSibyl UI to custom-choose the currency (fiat or crypto) he prefers to receive a loan in. The Dapp will automatically standardize all the metrics in the credit scoring algorithm to the chosen currency. The range of currencies will be initially limited to a predetermined set (USD, EUR, BTC, ETX, USDT, USDC, BNB, XRP). We will integrate with [CoinAPI.io](https://github.com/coinapi/coinapi-sdk) to perform real-time currency conversion.
+ - **Allow smart currency selection**: the user interacts with the SCRTSibyl UI to custom-choose their preferred currency (fiat or crypto) to receive a loan. The dApp will automatically standardize all the metrics in the credit scoring algorithm to the chosen currency. The range of currencies will be initially limited to a predetermined set (USD, EUR, BTC, ETX, USDT, USDC, BNB, XRP). We will integrate with an API (likely [CoinAPI.io](https://github.com/coinapi/coinapi-sdk)) to perform real-time currency conversion.
  
  - **Improve risk indicators**: we will increase the output accuracy of the credit scoring model by returning low/medium/high-risk indicators on the scoring bin assigned to the user. For example, imagine a user qualified for a mini-loan ranging from USD 5-10K. This scoring bin is rather broad, and a user may be very well suited to receive a loan of USD 6K but may struggle to pay back a loan worth USD 9K. Thus, we'll develop three categories to assess the risk level for given users to receive their associated loans. The same user qualifying for USD 5-10K may be a low-risk user in receiving a USD 6K loan but is a high-risk user for a USD 9K loan.
 
 ## Detailed Product Description
 
-For a detailed description of the architecture and components of the model, please refer to the [phase 1.](https://github.com/BalloonBox-Inc/SCRTnetwork_oracle/blob/main/SCRTSybil.md#detailed-product-description)
+For a detailed description of the architecture and components of the model, please refer to [phase #1.](https://github.com/BalloonBox-Inc/SCRTnetwork_oracle/blob/main/SCRTSybil.md#detailed-product-description)
 
 ## Go-to-Market (GTM) Plan
 
@@ -48,7 +48,7 @@ We believe in the value of having a public network with the option and flexibili
 Company Website - Official Repository
 * [BalloonBox](https://www.balloonbox.io/) - [repository](https://github.com/BalloonBox-Inc)
 
-## Team Members
+## Team Members :technologist: :woman_technologist:
 Personal LinkedIn - Personal Repository
 * [Michael Brink](https://www.linkedin.com/in/michael-brink-680b3767/) - [repository](https://github.com/MichaelBrink)
 * [Matteo Mortelliti](https://www.linkedin.com/in/matteo-mortelliti/) - [repository](https://github.com/mmortelliti)
@@ -69,7 +69,7 @@ Our team consists of the following roles:
 - Data Scientist (x2) (Credit Score algorithm + build)
 - Product Manager (Community, articles, GitHub house-keeping, managing public PRs)
 
-## Development Roadmap
+## Development Roadmap :nut_and_bolt: :gear: :hammer_and_wrench:
 
 ### Overview
 
@@ -99,7 +99,7 @@ We would be willing to consider part payment (up to 50%) in SCRT, BTC or ETH. Th
 | 1c. | API module | Refine risk model. |
 | 2. | Data Cleaning | Setup VM with sufficient resources for score computation. |
 | 3. | Data Integration | Overlay web2 with web3 validation data for the new API. |
-| 4. | ML Module - Build | Build an light ML model to calculate user credit score. |
+| 4. | AI Module - Build | Build a light AI model to calculate user credit score. |
  
 ### Milestone 2 - Test and Validation
 - **Estimated duration:** Week 8-10
@@ -110,7 +110,7 @@ We would be willing to consider part payment (up to 50%) in SCRT, BTC or ETH. Th
 | 0a. | License | Apache 2.0 |
 | 0b. | Documentation | We will provide inline documentation of the code. |
 | 0c. | Test Guide | Run unit tests to ensure functionality and robustness of core functions (~70%). |
-| 1. | ML Module - Deploy | Train, test, deploy the new ML model and compute credit scores. |
+| 1. | AI Module - Deploy | Train, test, deploy the upgraded AI model and compute credit scores. |
 | 2. | Contract | Execute the smart contract, written in Rust, to encrypt the calculated credit score to Secret Network blockchain. |
 
 ### Milestone 3 - WebApp: Framework + UI 
@@ -121,12 +121,12 @@ We would be willing to consider part payment (up to 50%) in SCRT, BTC or ETH. Th
 | -----: | ----------- | ------------- |
 | 0a. | License | Apache 2.0 |
 | 0b. | Documentation | We will provide inline documentation of the code for the WebApp framework. |
-| 1. | Framework | Implement SCRT wallet Login, personal info input, hover+select+OAuth2 in chosen validator |
+| 1. | Framework | Implement Keplr wallet Login, personal info input, hover+select+OAuth2 in chosen validator |
 | 2. | UI Module | Design the UI flow for retrieving the score history. | 
 | 3. | UI Module | WebApp aesthetics and functionalitiy refinements. |
 | 4. | Tutorial | We will publish a video tutorial that walks a user through the SCRTSybil WebApp instructing them on the new features. | 
 
-## Additional Information
+## Additional Information :heavy_plus_sign:
 
 ### Why SCRT?
 
