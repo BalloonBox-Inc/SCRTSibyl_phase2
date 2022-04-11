@@ -27,7 +27,7 @@ Phase 2 of SCRTSibyl features the following extensions:
 
 ## Detailed Product Description
 
-For a detailed description of the architecture and components of the model, please refer to the [phase 1 here.](https://github.com/BalloonBox-Inc/SCRTnetwork_oracle/blob/main/SCRTSybil.md#detailed-product-description)
+For a detailed description of the architecture and components of the model, please refer to the [phase 1.](https://github.com/BalloonBox-Inc/SCRTnetwork_oracle/blob/main/SCRTSybil.md#detailed-product-description)
 
 ## Go-to-Market (GTM) Plan
 
@@ -138,3 +138,11 @@ We would be willing to consider part payment (up to 50%) in SCRT, BTC or ETH. Th
 
 
 ### Future Plans
+
+1. **Subscription**
+
+   Develop a membership plan to allow users to have their credit scores updated every month.
+
+2. **Blacklisting**
+
+   Develop a feature to red flag or blacklist late payers and bad payers.
