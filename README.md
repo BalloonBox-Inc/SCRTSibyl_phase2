@@ -3,45 +3,43 @@
 ## Project Description
 Project name: **SCRTSibyl_phase2**
 
-SCRTSybil is an oracle for credit score checks developed through an initial Secret Network grant. This is an application to fund a phase #2 expansion of SCRTSibyl through a second grant.
+SCRTSybil is an oracle for credit score checks developed through an initial Secret Network grant. This is an application to fund a `phase 2` expansion of SCRTSibyl through a second grant.
 
 The SCRTSibyl dApp targets a specific use case: P2P micro-lending, namely facilitating lending and borrowing of microloans ranging between USD 1-25K. As such, the dApp is already able to compute credit scores, to validate users' credibility, and to determine the loan size (in USD) a user qualifies for.
 
-The oracle runs a credit score check on either the user's preferred bank account (integrating through Plaid API) or the user's Coinbase account (integrating through Coinbase API). The credit check assesses the user's financial health and predicts whether the user can pay back their micro-loan. The dApp then executes a smart contract to write and store the calculated score onto the Secret Network blockchain.
+The oracle runs a credit score check on either the user's preferred bank account (integrating through Plaid API) or the user's Coinbase account (integrating through Coinbase API). The credit check assesses the user's financial health and predicts whether the user can pay back their micro-loan. The dApp then executes a smart contract to write and store thirscore onto the Secret Network blockchain.
 
 Throughout the process, users are in control of their own data, which is securely stored on-chain through the privacy-preserving Secret Network protocols. Users have even more control over their own data: they can view their score at any time through a read-only secret and costless permission key; they can issue viewing keys by paying a gas fee, to then share the key with third parties issuing them a loan; lastly, they can revoke the issued viewing keys by running a state-changing function in the smart contract at the cost of a gas fee.
 
-In phase 2, we want to both expand our use case including loans of +25K USD, but also increase user adoption of the dApp, by integrating with new data validators and allowing the user to self-select the loan currency. We want SCRTSibyl to be able to cater to a wide loan range and for the dApp to be accessible for an increasingly large pool of crypto investors.
+In `phase 2`, we want to both expand our use case including loans of +25K USD, but also increase user adoption of the dApp, by integrating with new data validators and allowing the user to self-select the loan currency. We want SCRTSibyl to be able to cater to a wide loan range and for the dApp to be accessible for an increasingly large pool of crypto investors.
 
 ## Problem / Solution :bulb: :high_brightness: :toolbox:
 
-Phase 2 of SCRTSibyl features the following extensions:
+`Phase 2` of SCRTSibyl features the following extensions:
 
- - **Expand validator options**: we will integrate with the Binance API. Binance is a well-established and growing crypto exchange platform and we want to allow users who don't own a wallet in Coinbase the chance to get their score calculated by connecting their Binance account instead. Thus, users have now the choice to connect either their Coinbase account, their Binance account, or their traditional bank account.
+ - **Expand validator options**: we will integrate with the Binance API. Binance is a well-established and growing crypto exchange platform. We want to allow those users who non't own a Coinbase wallet to connect their Binance account instead. Thus, users have now the choice to connect either their Coinbase account, their Binance account, or their traditional bank account.
  
- - **Add credit score history**: a user's score may change and improve over time and we want empowers users with a positive pedigree to demonstrate the improvement in their credit history. We'll implement a query function to fetch the chronologically ordered list of their credit scores with associated timestamps. Users will be in control of their credit score history and, if they so choose, will be able to share it with third parties.
+ - **Add credit score history**: a user's score may change and improve over time and we want to empower users with a positive pedigree to demonstrate their credit history improvement. We'll implement a query function to fetch the chronologically ordered list of their credit scores with associated timestamps. Users will be in control of their credit score history and, if they so choose, they can share it with third parties.
 
  - **Allow smart currency selection**: the user interacts with the SCRTSibyl UI to custom-choose their preferred currency (fiat or crypto) to receive a loan. The dApp will automatically standardize all the metrics in the credit scoring algorithm to the chosen currency. The range of currencies will be initially limited to a predetermined set (USD, EUR, BTC, ETX, USDT, USDC, BNB, XRP). We will integrate with an API (likely [CoinAPI.io](https://github.com/coinapi/coinapi-sdk)) to perform real-time currency conversion.
  
- - **Improve risk indicators**: we will increase the output accuracy of the credit scoring model by returning low/medium/high-risk indicators on the scoring bin assigned to the user. For example, imagine a user qualified for a mini-loan ranging from USD 5-10K. This scoring bin is rather broad, and a user may be very well suited to receive a loan of USD 6K but may struggle to pay back a loan worth USD 9K. Thus, we'll develop three categories to assess the risk level for given users to receive their associated loans. The same user qualifying for USD 5-10K may be a low-risk user in receiving a USD 6K loan but is a high-risk user for a USD 9K loan.
+ - **Improve risk indicators**: we will increase the output accuracy of the credit scoring model by returning `low`/`medium`/`high-risk` indicators on the scoring bin assigned to the user. For example, imagine a user qualified for a mini-loan ranging from USD 5-10K. This scoring bin is rather broad, and a user may be very well suited to receive a loan of USD 6K but may struggle to pay back a loan worth USD 9K. Thus, we'll develop three categories to assess the risk level for given users to receive their associated loans. The same user qualifying for USD 5-10K may be a low-risk user in receiving a USD 6K loan, yet a high-risk user for a USD 9K loan.
 
 ## Detailed Product Description
 
 For a detailed description of the architecture and components of the model, please refer to [phase #1.](https://github.com/BalloonBox-Inc/SCRTnetwork_oracle/blob/main/SCRTSybil.md#detailed-product-description)
 
-## Go-to-Market (GTM) Plan
+## Value Capture for Secret Network Ecosystem
 
-As part of the strategy of gaining more traffic and user adoption to Secret Network, we are expanding the access channels to SCRT Sybil credit scoring tool, improving the user experience, and increasing the loan range eligibility. So that, the GTM plan consists of:
+As part of the strategy to gain traffic in the Secret Network, we are expanding the access channels to SCRT Sybil credit scoring tool, improving the user experience, and increasing the loan range eligibility. The go-to-market plan plan consists of:
 
-1. User adoption: integrating with Binance will bring many more users since it holds more than 600 cryptocurrencies and it is one of the most popular and largest cryptocurrency exchangers.
+1. User adoption: integrating with Binance will onboard more users since it holds more than 600 cryptocurrencies and it is one of the most popular and largest cryptocurrency exchanges.
 
-2. User experience: allowing users to keep tracking their credit score history and selecting different currencies to get loans will enhance the whole experience by providing more control to user's own decisions.
+2. User experience: tracking credit history and selecting different loan currencies will enhance the whole experience by providing more control to user's own decisions.
 
 3. User loan range: refining the accuracy of the credit score will allow the initial P2P micro-lending loans to increase to up to USD 100,000.
 
 We believe in the value of having a public network with the option and flexibility of data encryption and ultimately believe that mainstream tools for financial services like credit scores will be of the first major requirements for service providers on Secret Network.
-
-## Value Capture for Secret Network Ecosystem
 
 
 ## Company
@@ -59,7 +57,7 @@ Personal LinkedIn - Personal Repository
 
 ## Team’s Experience
 
-All team members of SCRTSybil are from Balloon Box Technology Inc., a FinTech company based in Vancouver, BC specialized in software engineering & data science solutions from design through launch. Besides a string of projects for clients all around the world, our team is experienced in developing web apps for crypto asset management, custom Ledger-integrated apps, integrating with PSPs, crpyto exchanges and KYC providers, visualizing big data on L1 & L2s and building wallet solutions. Our team members are proficient in Python, C++, Java, Javascript, and other object-oriented and development languages. 
+All team members of SCRTSybil are from Balloon Box Technology Inc., a FinTech company based in Vancouver, BC Canada, specialized in software engineering & data science solutions from design through launch. Besides a string of projects for clients all around the world, our team is experienced in developing web apps for crypto asset management, custom Ledger-integrated apps, integrating with PSPs, crpyto exchanges and KYC providers, visualizing big data on L1 & L2s and building wallet solutions. Our team members are proficient in Python, C++, Java, Javascript, and other object-oriented and development languages. 
  
 Our team consists of the following roles:
 - Product Architect (Full product architecture) 
@@ -134,9 +132,6 @@ We would be willing to consider part payment (up to 50%) in SCRT, BTC or ETH. Th
 
 2. **Have you ever applied for other grants?** Yes, this is a follow-up grant to expand the work we completed after the first SCRT grant we received in January 2022.
  
-### Scope and Limitations
-
-
 
 ### Future Plans
 
