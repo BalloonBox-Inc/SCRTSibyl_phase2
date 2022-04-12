@@ -112,7 +112,8 @@ We would be willing to consider part payment (up to 50%) in SCRT, BTC or ETH. Th
 | 0b. | Documentation | We will provide inline documentation of the code. |
 | 0c. | Test Guide | Run unit tests to ensure functionality and robustness of core functions (~70%). |
 | 1. | AI Module - Deploy | Train, test, deploy the upgraded AI model and compute credit scores. |
-| 2. | Contract | Execute the smart contract, written in Rust, to encrypt the calculated credit score to Secret Network blockchain. |
+| 2a. | Contract | Add timestamps and selected validator to the the data stored in the Secret Network blockchain. |
+| 2b. | Contract | Execute the smart contract, written in Rust, to encrypt the calculated credit score to Secret Network blockchain. |
 
 ### Milestone 3 - WebApp: Framework + UI 
 - **Estimated duration:** Week 11-14
