@@ -27,7 +27,7 @@ In `phase 2`, we want to both expand our use case including loans of +25K USD, b
 
 ## Detailed Product Description
 
-For a detailed description of the architecture and components of the model, please refer to [phase #1.](https://github.com/BalloonBox-Inc/SCRTnetwork_oracle/blob/main/SCRTSybil.md#detailed-product-description)
+For a detailed description of the architecture and components of the model, please refer to [phase #1](https://github.com/BalloonBox-Inc/SCRTnetwork_oracle/blob/main/SCRTSybil.md#detailed-product-description) of this oracle.
 
 ## Value Capture for Secret Network Ecosystem
 
@@ -137,8 +137,12 @@ We would be willing to consider part payment (up to 50%) in SCRT, BTC or ETH. Th
 
 1. **Subscription**
 
-   Develop a membership plan to allow users to have their credit scores updated every month.
+   Develop a membership plan to allow users to have their credit scores updated every month so they can even more demonstrate their credibility.
 
 2. **Blacklisting**
 
-   Develop a feature to red flag or blacklist late payers and bad payers.
+   Develop a feature to red flag or blacklist late payers and bad payers to avoid distrusted users or potential defaults.
+
+3. **Machine Learning**
+
+   Develop Machine Learning models alongside the credit scores so that users do  not need to trust a single specific entity fully.
