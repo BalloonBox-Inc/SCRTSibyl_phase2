@@ -13,7 +13,7 @@ Throughout the process, users are in control of their own data, which is securel
 
 In phase 2, we want to both expand our use case including loans of +25K USD, but also increase user adoption of the dApp, by integrating with new data validators and allowing the user to self-select the loan currency. We want SCRTSibyl to be able to cater to a wide loan range and for the dApp to be accessible for an increasingly large pool of crypto investors.
 
-## Problem / Solution :bulb:
+## Problem / Solution :bulb: :high_brightness: :toolbox:
 
 Phase 2 of SCRTSibyl features the following extensions:
 
@@ -126,7 +126,7 @@ We would be willing to consider part payment (up to 50%) in SCRT, BTC or ETH. Th
 | 3. | UI Module | WebApp aesthetics and functionalitiy refinements. |
 | 4. | Tutorial | We will publish a video tutorial that walks a user through the SCRTSybil WebApp instructing them on the new features. | 
 
-## Additional Information :heavy_plus_sign:
+## Additional Information :heavy_plus_sign: :dart: :pushpin:
 
 ### Why SCRT?
 
@@ -135,6 +135,7 @@ We would be willing to consider part payment (up to 50%) in SCRT, BTC or ETH. Th
 2. **Have you ever applied for other grants?** Yes, this is a follow-up grant to expand the work we completed after the first SCRT grant we received in January 2022.
  
 ### Scope and Limitations
+
 
 
 ### Future Plans
