@@ -1,4 +1,5 @@
 # Team Name: BalloonBox
+![scrt sibyl image](./images/logo_horizontal.png)
 
 ## Project Description
 Project name: **SCRTSibyl_phase2**
@@ -7,33 +8,45 @@ SCRTSybil is an oracle for credit score checks developed through an initial Secr
 
 The SCRTSibyl dApp targets a specific use case: P2P micro-lending, namely facilitating lending and borrowing of microloans ranging between USD 1-25K. As such, the dApp is already able to compute credit scores, to validate users' credibility, and to determine the loan size (in USD) a user qualifies for.
 
-The oracle runs a credit score check on either the user's preferred bank account (integrating through Plaid API) or the user's Coinbase account (integrating through Coinbase API). The credit check assesses the user's financial health and predicts whether the user can pay back their micro-loan. The dApp then executes a smart contract to write and store thirscore onto the Secret Network blockchain.
+The oracle runs a credit score check on either the user's preferred bank account (integrating through Plaid API) or the user's Coinbase account (integrating through Coinbase API). The credit check assesses the user's financial health and predicts whether the user can pay back their micro-loan. The dApp then executes a smart contract to write and store their score to the Secret Network blockchain.
 
-Throughout the process, users are in control of their own data, which is securely stored on-chain through the privacy-preserving Secret Network protocols. When users store their score on the chain, there are gas fees involved. In order to query their score they can do so one of two ways: 1) They create a query permit which would be generated off chain and therefore be costless. Or 2) they can generate a permission key, which would be stored on chain and would cost gas fees. They can issue viewing keys or the permit queries to third party providers allowing them to query the user's score without any gas fees. If the user would like to revoke their permit queries or change their viewing key, it will cost they can do so by running a state-changing function in the smart contract at the cost of a gas fee.
+Throughout the process, users are in control of their own data, which is securely stored on-chain through the privacy-preserving Secret Network protocols. When users store their score on the chain, there are gas fees involved. In order to query their score they can do so one of two ways: `(1)` They create a query permit which would be generated off chain and therefore be costless; OR `(2)` they generate a permission key, which would be stored on chain and would cost gas fees. They can issue viewing keys or the permit queries to third party providers allowing them to query the user's score without any gas fees. If the user would like to revoke their permit queries or change their viewing key, they can do so by running a state-changing function in the smart contract at the cost of a gas fee.
 
-In `phase 2`, we want to both expand our use case including loans of +25K USD, but also increase user adoption of the dApp, by integrating with new data validators and allowing the user to self-select the loan currency. We want SCRTSibyl to be able to cater to a wide loan range and for the dApp to be accessible for an increasingly large pool of crypto investors.
+In `phase 2`, we want to both expand our use case including loans of +25K USD, but also increase user adoption by integrating with new data validators and allowing the u ser to self-select the loan currency. In this way, SCRTSibyl will cater to a wide loan range becoming an accessible dApp for an increasingly large pool of crypto investors.
 
-## Problem / Solution :bulb: :high_brightness: :toolbox:
+## Problem / Solution
+
+A credit score is a number that expresses your credit information at one point in time. It indicates the risk you represent for lenders, compared with other consumers, on a scale from 300 to 900. High scores on this scale are good. The higher your score, the lower the risk for the lender.
+
+We believe in the value of having a public network with the option and flexibility of data encryption and ultimately believe that mainstream tools for financial services like credit scores will be among the first major requirements for service providers on Secret Network and in the web3 environment.
+
+How can one validate a user's financial pedigree while preserving their privacy? SCRTSibyl allows both. We aim to bring together lenders and borrowers through a dApp designed around the principles of security, data validation, encryption, and data privacy. 
+
+
+## Detailed Product Description :bulb: :high_brightness: :toolbox:
 
 `Phase 2` of SCRTSibyl features the following extensions:
 
  - **Expand validator options**: we will integrate with the Binance API. Binance is a well-established and growing crypto exchange platform. We want to allow those users who non't own a Coinbase wallet to connect their Binance account instead. Thus, users have now the choice to connect either their Coinbase account, their Binance account, or their traditional bank account. Please find a preview of the [validators](./images/validators.png).
  
- - **Add credit score history**: a user's score may change and improve over time and we want to empower users with a positive pedigree to demonstrate their credit history improvement. We'll implement a query function to fetch the chronologically ordered list of their credit scores with associated timestamps. Users will be in control of their credit score history and, if they so choose, they can share it with third parties. Please find previews of the [history chart](./images/history_chart.png) and the [history list](./images/history_list.png).
+ - **Add credit score history**: a user's score may change and improve over time and we want to empower users with a positive pedigree to demonstrate their credit history improvement. We'll implement a query function to fetch the chronologically ordered list of their credit scores with associated timestamps. Users will be in control of their credit score history and, if they so choose, they can share it with third parties. Please find previews of the [history chart](./images/history_chart.png) and the [history table](./images/history_list.png).
 
- - **Allow smart currency selection**: the user interacts with the SCRTSibyl UI to custom-choose their preferred currency (fiat or crypto) to receive a loan. The dApp will automatically standardize all the metrics in the credit scoring algorithm to the chosen currency. The range of currencies will be initially limited to a predetermined set (USD, EUR, BTC, ETX, USDT, USDC, BNB, XRP). We will integrate with an API (likely [CoinAPI.io](https://github.com/coinapi/coinapi-sdk)) to perform real-time currency conversion.
+ - **Allow smart currency selection**: the user interacts with the SCRTSibyl UI to custom-choose their preferred currency (fiat or crypto) for score calculation. The dApp will automatically standardize all the metrics in the credit scoring algorithm to the chosen currency. The range of currencies will be initially limited to a predetermined set (USD, EUR, BTC, ETX, USDT, USDC, BNB, XRP). We will integrate with an API (likely [CoinAPI.io](https://github.com/coinapi/coinapi-sdk)) to perform real-time currency conversion.
  
- - **Improve risk indicators**: we will increase the output accuracy of the credit scoring model by returning `low`/`medium`/`high-risk` indicators on the scoring bin assigned to the user. For example, imagine a user qualified for a mini-loan ranging from USD 5-10K. This scoring bin is rather broad, and a user may be very well suited to receive a loan of USD 6K but may struggle to pay back a loan worth USD 9K. Thus, we'll develop three categories to assess the risk level for given users to receive their associated loans. The same user qualifying for USD 5-10K may be a low-risk user in receiving a USD 6K loan, yet a high-risk user for a USD 9K loan. Please find a preview of the [risk indicator](./images/risk_indicator.png).
+ - **Improve risk indicators**: we will increase the output accuracy of the credit scoring model by returning `low` / `medium` / `high-risk` indicators on the scoring bin assigned to the user. For example, imagine a user qualified for a mini-loan ranging from USD 5-10K. This scoring bin is rather broad, and a user may be very well suited to receive a loan of USD 6K but may struggle to pay back a loan worth USD 9K. Thus, we'll develop three categories to assess the risk level for given users to receive their associated loans. The same user qualifying for USD 5-10K may be a low-risk user in receiving a USD 6K loan, yet a high-risk user for a USD 9K loan. Please find a preview of the [risk indicator](./images/risk_indicator.png).
 
-## Detailed Product Description
+For model architecture and components, please refer to [phase #1](https://github.com/BalloonBox-Inc/SCRTnetwork_oracle/blob/main/SCRTSybil.md#detailed-product-description) of this oracle. Mockups of `Phase 2` expansions follow below.
 
-For a detailed description of the architecture and components of the model, please refer to [phase #1](https://github.com/BalloonBox-Inc/SCRTnetwork_oracle/blob/main/SCRTSybil.md#detailed-product-description) of this oracle.
+
+![scrt sibyl image](./images/validators.png)
+
+![scrt sibyl image](./images/history_chart.png)
+
+![scrt sibyl image](./images/history_table.png)
+
+![scrt sibyl image](./images/risk_indicator.png)
 
 ## Value Capture for Secret Network Ecosystem
-
-A credit score is a number that expresses your credit information at one point in time. It indicates the risk you represent for lenders, compared with other consumers, on a scale from 300 to 900. High scores on this scale are good. The higher your score, the lower the risk for the lender.
-
-We believe in the value of having a public network with the option and flexibility of data encryption and ultimately believe that mainstream tools for financial services like credit scores will be of the first major requirements for service providers on Secret Network and to the web3 environment.
 
 As part of the strategy to gain traffic in the Secret Network, we are expanding the access channels to SCRT Sybil credit scoring tool, improving the user experience, and increasing the loan range eligibility. The go-to-market plan plan consists of:
 
@@ -43,14 +56,14 @@ As part of the strategy to gain traffic in the Secret Network, we are expanding 
 
 3. User loan range: refining the accuracy of the credit score will allow the initial P2P micro-lending loans to increase to up to USD 100,000.
 
-As we expand to more users and improve model accuracy, we provide more credibility and robustness to the oracle.
+As we expand to more users and improve model accuracy, we strengthen the credibility and robustness of the oracle.
 
 ## Company
 Company Website - Official Repository
 * [BalloonBox](https://www.balloonbox.io/) - [repository](https://github.com/BalloonBox-Inc)
 
 ## Team Members :technologist: :woman_technologist:
-Personal LinkedIn - Personal Repository
+Personal LinkedIn - GitHub Repository
 * [Michael Brink](https://www.linkedin.com/in/michael-brink-680b3767/) - [repository](https://github.com/MichaelBrink)
 * [Matteo Mortelliti](https://www.linkedin.com/in/matteo-mortelliti/) - [repository](https://github.com/mmortelliti)
 * [Mayllon Miranda](https://www.linkedin.com/in/mayllon-miranda-8aa9b0163/) - [repository](https://github.com/m3mayllon)
@@ -112,7 +125,7 @@ We would be willing to consider part payment (up to 50%) in SCRT, BTC or ETH. Th
 | 0b. | Documentation | We will provide inline documentation of the code. |
 | 0c. | Test Guide | Run unit tests to ensure functionality and robustness of core functions (~70%). |
 | 1. | AI Module - Deploy | Train, test, deploy the upgraded AI model and compute credit scores. |
-| 2a. | Contract | Add timestamps and selected validator to the the data stored in the Secret Network blockchain. |
+| 2a. | Contract | Add 2 fields to the data currently stored in the smart contract: `(a)` score timestamp and `(b)` validator used in the score calculation (Plaid, Coinbase, Binance). |
 | 2b. | Contract | Execute the smart contract, written in Rust, to encrypt the calculated credit score to Secret Network blockchain. |
 
 ### Milestone 3 - WebApp: Framework + UI 
