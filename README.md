@@ -31,6 +31,10 @@ For a detailed description of the architecture and components of the model, plea
 
 ## Value Capture for Secret Network Ecosystem
 
+A credit score is a number that expresses your credit information at one point in time. It indicates the risk you represent for lenders, compared with other consumers, on a scale from 300 to 900. High scores on this scale are good. The higher your score, the lower the risk for the lender.
+
+We believe in the value of having a public network with the option and flexibility of data encryption and ultimately believe that mainstream tools for financial services like credit scores will be of the first major requirements for service providers on Secret Network and to the web3 environment.
+
 As part of the strategy to gain traffic in the Secret Network, we are expanding the access channels to SCRT Sybil credit scoring tool, improving the user experience, and increasing the loan range eligibility. The go-to-market plan plan consists of:
 
 1. User adoption: integrating with Binance will onboard more users since it holds more than 600 cryptocurrencies and it is one of the most popular and largest cryptocurrency exchanges.
@@ -39,8 +43,7 @@ As part of the strategy to gain traffic in the Secret Network, we are expanding 
 
 3. User loan range: refining the accuracy of the credit score will allow the initial P2P micro-lending loans to increase to up to USD 100,000.
 
-We believe in the value of having a public network with the option and flexibility of data encryption and ultimately believe that mainstream tools for financial services like credit scores will be of the first major requirements for service providers on Secret Network.
-
+As we expand to more users and improve model accuracy, we provide more credibility and robustness to the oracle.
 
 ## Company
 Company Website - Official Repository
@@ -132,7 +135,6 @@ We would be willing to consider part payment (up to 50%) in SCRT, BTC or ETH. Th
 
 2. **Have you ever applied for other grants?** Yes, this is a follow-up grant to expand the work we completed after the first SCRT grant we received in January 2022.
  
-
 ### Future Plans
 
 1. **Subscription**
