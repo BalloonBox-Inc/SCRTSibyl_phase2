@@ -35,8 +35,7 @@ How can one validate a user's financial pedigree while preserving their privacy?
  
  - **Improve risk indicators**: we will increase the output accuracy of the credit scoring model by returning `low` / `medium` / `high-risk` indicators on the scoring bin assigned to the user. For example, imagine a user qualified for a mini-loan ranging from USD 5-10K. This scoring bin is rather broad, and a user may be very well suited to receive a loan of USD 6K but may struggle to pay back a loan worth USD 9K. Thus, we'll develop three categories to assess the risk level for given users to receive their associated loans. The same user qualifying for USD 5-10K may be a low-risk user in receiving a USD 6K loan, yet a high-risk user for a USD 9K loan. Please find a preview of the [risk indicator](./images/risk_indicator.png).
 
-For model architecture and components, please refer to [phase #1](https://github.com/BalloonBox-Inc/SCRTnetwork_oracle/blob/main/SCRTSybil.md#detailed-product-description) of this oracle. Mockups of `Phase 2` expansions follow below.
-
+### Mockups
 
 ![scrt sibyl image](./images/validators.png)
 
@@ -45,6 +44,12 @@ For model architecture and components, please refer to [phase #1](https://github
 ![scrt sibyl image](./images/history_table.png)
 
 ![scrt sibyl image](./images/risk_indicator.png)
+
+### Architecture and Components
+
+For a detailed description of former components, please refer to [phase #1](https://github.com/BalloonBox-Inc/SCRTnetwork_oracle/blob/main/SCRTSybil.md#detailed-product-description) of this oracle.
+
+![](./images/architecture.png)
 
 ## Value Capture for Secret Network Ecosystem
 
