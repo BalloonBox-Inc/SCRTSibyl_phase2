@@ -92,22 +92,22 @@ Our team consists of the following roles:
 
 ### Overview
 
-- **Total Estimated Duration:** 14 weeks
-- **Full-Time Equivalent (FTE):** 3.5
-- **Total Costs:** USD 120,000
+- **Total Estimated Duration:** 13 weeks
+- **Full-Time Equivalent (FTE):** 3.1
+- **Total Costs:** USD 105,000
 
-Our team will require 3.5 months to complete this project (subject to a mutually agreed upon solution design that both Bbox and SCRT feel excited about). We intend to have 2 developers full-time, 2 data scientists full-time, and 1 UX/UI designer part-time, a product architect, and a project manager. We can receive payments in 4 disbursements, one at the beginning of the grant, three after completion of each milestone.
+Our team will require 3.5 months to complete this project (subject to a mutually agreed upon solution design that both Bbox and SCRT feel excited about). We intend to have 2 developers full-time, 1 data scientist full-time, and 1 UX/UI designer part-time, a product architect, and a project manager. We can receive payments in 4 disbursements, one at the beginning of the grant, three after completion of each milestone.
 We would be willing to consider part payment (up to 50%) in SCRT, BTC or ETH. The grant can be paid to either of the following addresses:
 
 - BTC address: bc1qz36smg7zg9d2de7qurj9a49fetemavta39a9zp
 - ETH address: 0x3ffA0e66091742a867430D140E36826c06ba19Be
 - SCRT address: secret18qeg7lx63wkqvy9e295slufvch5rfel2v23tsu
 
-**Initial amount at grant issuance:** USD 20,000
+**Initial amount at grant issuance:** USD 15,000
  
 ### Milestone 1 - APIs, Integration, Credit Score Algorithm
 - **Estimated duration:** Week 1-8
-- **Costs:** USD 50,000
+- **Costs:** USD 40,000
 
 | Number | Deliverable | Specification |
 | -----: | ----------- | ------------- |
@@ -121,7 +121,7 @@ We would be willing to consider part payment (up to 50%) in SCRT, BTC or ETH. Th
 | 4. | AI Module - Build | Build a light AI model to calculate user credit score. |
  
 ### Milestone 2 - Test and Validation
-- **Estimated duration:** Week 8-10
+- **Estimated duration:** Week 9-10
 - **Costs:** USD 20,000
 
 | Number | Deliverable | Specification |
@@ -134,7 +134,7 @@ We would be willing to consider part payment (up to 50%) in SCRT, BTC or ETH. Th
 | 2b. | Contract | Execute the smart contract, written in Rust, to encrypt the calculated credit score to Secret Network blockchain. |
 
 ### Milestone 3 - WebApp: Framework + UI 
-- **Estimated duration:** Week 11-14
+- **Estimated duration:** Week 11-13
 - **Costs:** USD 30,000
 
 | Number | Deliverable | Specification |
