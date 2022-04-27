@@ -27,7 +27,7 @@ How can one validate a user's financial pedigree while preserving their privacy?
 
 `Phase 2` of SCRTSibyl features the following extensions:
 
- - **Expand validator options**: we will integrate with the Binance API. Binance is a well-established and growing crypto exchange platform. We want to allow those users who non't own a Coinbase wallet to connect their Binance account instead. Thus, users have now the choice to connect either their Coinbase account, their Binance account, or their traditional bank account. Please find a preview of the [validators](./images/validators.png).
+ - **Expand validator options**: we will integrate with the Binance API. Binance is a well-established and growing crypto exchange platform. We want to allow those users who don't own a Coinbase wallet to connect their Binance account instead. Thus, users have now the choice to connect either their Coinbase account, their Binance account, or their traditional bank account. Please find a preview of the [validators](./images/validators.png).
  
  - **Add credit score history**: a user's score may change and improve over time and we want to empower users with a positive pedigree to demonstrate their credit history improvement. We'll implement a query function to fetch the chronologically ordered list of their credit scores with associated timestamps. Users will be in control of their credit score history and, if they so choose, they can share it with third parties. Please find previews of the [history chart](./images/history_chart.png) and the [history table](./images/history_table.png).
 
