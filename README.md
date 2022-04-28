@@ -36,18 +36,32 @@ How can one validate a user's financial pedigree while preserving their privacy?
 
 - **Improve risk indicators**: we will increase the output accuracy of the credit scoring model by returning `low` / `medium` / `high-risk` indicators on the scoring bin assigned to the user. For example, imagine a user qualified for a mini-loan ranging from USD 5-10K. This scoring bin is rather broad, and a user may be very well suited to receive a loan of USD 6K but may struggle to pay back a loan worth USD 9K. Thus, we'll develop three categories to assess the risk level for given users to receive their associated loans. The same user qualifying for USD 5-10K may be a low-risk user in receiving a USD 6K loan, yet a high-risk user for a USD 9K loan. Please find a preview of the [risk indicator](./images/risk_indicator.png).
 
-- **DApp Adoption KPIs**: we will track user adoption for SCRTsibyl. How many service providers queried a score? How many users went through the entire flow to calculate their credit sore and publish it to Secret blockchain? Since the DApp leverages a smart contract to write a score to the blockchain, the DApp leaves a virtual paper trail of all on-chain transactions associated with score calculation. For instance, each transaction sent to the contract originates from a particular Secret Network address. Counting the number of unique Secret Network addresses that submit transactions to the contract (i.e. if a particular address sends five transactions in a day, count them once) will provide a good estimate of the number of users interacting with the DApp.
-  There are many ways to track user adoption. Some of them are: integrating with Google Analytics to monitor web traffic on https://www.secretsibyl.com/ using Google Tag manager to track user's actions (e.g., publishing score to chain, quering a score). One can web scrape the Secret Network Block explorer or store in the smart contract the number of Kepler addresses that interacted with it. Using one (or more) of the approaches above, we commit to providing at least 2 KPI indicators: one for the applicant and one for the service provider. A sample list of possible adoption KPI indicators follows.
 
+- **DApp Adoption KPIs**: we will track user adoption for SCRTsibyl. How many service providers queried a score? How many users went through the entire flow to calculate their credit score and publish it to the Secret blockchain? How many developers forked Sibyl on GitHub? We will monitor (1) web traffic of secretsibyl.com site visitors; (2) traffic of DApp users; (3) traffic of developers using the DApp GitHub codebase. There are many possible adoption KPI indicators as listed in the table below. We commit to providing at least 3 of these indicators (one for each of these adoption categories: credit score applicant, service provider, and developers. 
+
+
+**(1) Secretsibyl.com site visitor analytics: (google analytics JS embed)**                                                        
 | Indicator | Description        | Measure                                                                                           |
 | --------- | ------------------ | ------------------------------------------------------------------------------------------------- |
-| TU        | Total Users        | Total number of users that have interacted with the DApp since completion of Phase2.              |
-| NU        | New Users          | Number of users storing their credit score to chain for the first time over a selected timeframe. |
-| DAU       | Daily Active Users | Number of unique Secret Network addresses that submit transactions to the contract.               |
-| UA        | User Adherence     | Number of returning users calculating their credit score repeatedly over time.                    |
-| TQ        | Total Queries      | Total number of credit score queries performed by service providers.                              |
-| TP        | Total Providers    | Number of unique service providers that ever queried a credit score using a query permit.         |
-| ...       | ...                | ...                                                                                               |
+| WV        | Web Visitors       | Number of website visitors by region (per day/week/month/etc.)                                    |
+| RV        | Returning Visitors | Number of returning visitors (track IP address count)                                             |
+| CR        | Count Redirects    | Source of finding secretsibyl.com (cookies for tracking redirects) (list + count of source names) |
+
+**(2) DApp usage analytics: applicant & provider (google analytics tag manager)**                                                  
+| Indicator | Description        | Measure                                                                                           |
+| --------- | ------------------ | ------------------------------------------------------------------------------------------------- |
+| TU        | Total Users        | Total users interacting with the DApp since completion of Phase2 (count)                          |
+| NU        | New Users          | Users storing their credit score to chain for the first time (count)                              |
+| DAU       | Daily Active Users | Unique Secret Network addresses that submit transactions to the contract (count + list?)          |
+| UA        | User Adherence     | Returning users calculating their credit score repeatedly (count)                                 |
+| TQ        | Total Queries      | Credit score queries performed by service providers (count)                                       |
+| TP        | Total Providers    | Unique service providers that queried a credit score using a query permit (count + address list)  |
+
+**(3) Dev Community adoption (GitHub)**                                                                                            
+| Indicator | Description        | Measure                                                                                           |
+| --------- | ------------------ | ------------------------------------------------------------------------------------------------- |
+| PF        | Project Forks      | GitHub project forks (count)                                                                      |
+| PR        | Pull Request       | Community member pull requests (count)                                                            |
 
 ### Mockups
 
