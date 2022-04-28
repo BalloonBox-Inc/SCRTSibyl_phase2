@@ -77,7 +77,7 @@ How can one validate a user's financial pedigree while preserving their privacy?
 
 For a detailed description of former components, please refer to [phase #1](https://github.com/BalloonBox-Inc/SCRTnetwork_oracle/blob/main/SCRTSybil.md#detailed-product-description) of this oracle.
 
-![](./images/architecture.png)
+![](https://github.com/BalloonBox-Inc/SCRTSibyl_phase2/blob/main/images/architecture.png)
 
 ## Value Capture for Secret Network Ecosystem
 
