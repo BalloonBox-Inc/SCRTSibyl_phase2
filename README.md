@@ -4,17 +4,17 @@
 
 ## Project Description
 
-Project name: **SCRTSibyl_phase2**
+Project name: **SCRTsibyl_phase2**
 
-SCRTSybil is an oracle for credit score checks developed through an initial Secret Network grant. This is an application to fund a `phase 2` expansion of SCRTSibyl through a second grant.
+SCRTSybil is an oracle for credit score checks developed through an initial Secret Network grant. This is an application to fund a `phase 2` expansion of SCRTsibyl through a second grant.
 
-The SCRTSibyl dApp targets a specific use case: P2P micro-lending, namely facilitating lending and borrowing of microloans ranging between USD 1-25K. As such, the dApp is already able to compute credit scores, to validate users' credibility, and to determine the loan size (in USD) a user qualifies for.
+The SCRTsibyl dApp targets a specific use case: P2P micro-lending, namely facilitating lending and borrowing of microloans ranging between USD 1-25K. As such, the dApp is already able to compute credit scores, to validate users' credibility, and to determine the loan size (in USD) a user qualifies for.
 
 The oracle runs a credit score check on either the user's preferred bank account (integrating through Plaid API) or the user's Coinbase account (integrating through Coinbase API). The credit check assesses the user's financial health and predicts whether the user can pay back their micro-loan. The dApp then executes a smart contract to write and store their score to the Secret Network blockchain.
 
 Throughout the process, users are in control of their own data, which is securely stored on-chain through the privacy-preserving Secret Network protocols. When users store their score on the chain, there are gas fees involved. In order to query their score they can do so one of two ways: `(1)` They create a query permit which would be generated off chain and therefore be costless; OR `(2)` they generate a permission key, which would be stored on chain and would cost gas fees. They can issue viewing keys or the permit queries to third party providers allowing them to query the user's score without any gas fees. If the user would like to revoke their permit queries or change their viewing key, they can do so by running a state-changing function in the smart contract at the cost of a gas fee.
 
-In `phase 2`, we want to both expand our use case including loans of +25K USD, but also increase user adoption by integrating with new data validators and allowing the u ser to self-select the loan currency. In this way, SCRTSibyl will cater to a wide loan range becoming an accessible dApp for an increasingly large pool of crypto investors.
+In `phase 2`, we want to both expand our use case including loans of +25K USD, but also increase user adoption by integrating with new data validators and allowing the u ser to self-select the loan currency. In this way, SCRTsibyl will cater to a wide loan range becoming an accessible dApp for an increasingly large pool of crypto investors.
 
 ## Problem / Solution
 
@@ -22,11 +22,11 @@ A credit score is a number that expresses your credit information at one point i
 
 We believe in the value of having a public network with the option and flexibility of data encryption and ultimately believe that mainstream tools for financial services like credit scores will be among the first major requirements for service providers on Secret Network and in the web3 environment.
 
-How can one validate a user's financial pedigree while preserving their privacy? SCRTSibyl allows both. We aim to bring together lenders and borrowers through a dApp designed around the principles of security, data validation, encryption, and data privacy.
+How can one validate a user's financial pedigree while preserving their privacy? SCRTsibyl allows both. We aim to bring together lenders and borrowers through a dApp designed around the principles of security, data validation, encryption, and data privacy.
 
 ## Detailed Product Description :bulb: :high_brightness: :toolbox:
 
-`Phase 2` of SCRTSibyl features the following extensions:
+`Phase 2` of SCRTsibyl features the following extensions:
 
 - **Expand validator options**: we will integrate with the Binance API. Binance is a well-established and growing crypto exchange platform. We want to allow those users who don't own a Coinbase wallet to connect their Binance account instead. Thus, users have now the choice to connect either their Coinbase account, their Binance account, or their traditional bank account. Please find a preview of the [validators](./images/validators.png).
 
@@ -36,11 +36,15 @@ How can one validate a user's financial pedigree while preserving their privacy?
 
 - **Improve risk indicators**: we will increase the output accuracy of the credit scoring model by returning `low` / `medium` / `high-risk` indicators on the scoring bin assigned to the user. For example, imagine a user qualified for a mini-loan ranging from USD 5-10K. This scoring bin is rather broad, and a user may be very well suited to receive a loan of USD 6K but may struggle to pay back a loan worth USD 9K. Thus, we'll develop three categories to assess the risk level for given users to receive their associated loans. The same user qualifying for USD 5-10K may be a low-risk user in receiving a USD 6K loan, yet a high-risk user for a USD 9K loan. Please find a preview of the [risk indicator](./images/risk_indicator.png).
 
-- **DApp Adoption KPIs**: analyzing the on-chain transactions associated with SCRTSibyl smart contract. For instance, each transaction sent to the contract originates from a particular Secret Network address. Counting the number of unique Secret Network addresses that submit transactions to the contract (i.e. if a particular address sends five transactions in a day count them once) should in theory provide a good estimate of the number of daily active users (DAUs). Here is a list of the KPI indicators:
+- **DApp Adoption KPIs**: we will track user adoption for SCRTsibyl. Since the DApp leverages a smart contract to write a score to the blockchain, the DApp leaves a virtual paper trail of all on-chain transactions associated with score calculation. For instance, each transaction sent to the contract originates from a particular Secret Network address. Counting the number of unique Secret Network addresses that submit transactions to the contract (i.e. if a particular address sends five transactions in a day, count them once) will provide a good estimate of the number of users interacting with the DApp. We commit to providing at least 2 KPI indicators. A sample list of adoption KPI indicators follows.
 
-| Indicator | Description        | Measure                                                                          |
-| --------- | ------------------ | -------------------------------------------------------------------------------- |
-| DAU       | Daily Active Users | Number of unique Secret Network address that submit transactions to the contract |
+| Indicator | Description        | Measure                                                                                           |
+| --------- | ------------------ | ------------------------------------------------------------------------------------------------- |
+| TU        | Total Users        | Total number of users that have interacted with the DApp since completion of Phase2.              |
+| NU        | New Users          | Number of users storing their credit score to chain for the first time over a selected timeframe. |
+| DAU       | Daily Active Users | Number of unique Secret Network addresses that submit transactions to the contract.               |
+| UA        | User Adherence     | Number of returning users calculating their credit score repeatedly over time.                    |
+| ...       | ...                |                                                                                                   |
 
 ### Mockups
 
@@ -159,7 +163,7 @@ We would be willing to consider part payment (up to 50%) in SCRT, BTC or ETH. Th
 |     1. | Framework     | Implement Keplr wallet Login, personal info input, hover+select+OAuth2 in chosen validator                            |
 |     2. | UI Module     | Design the UI flow for retrieving the score history.                                                                  |
 |     3. | UI Module     | WebApp aesthetics and functionalitiy refinements.                                                                     |
-|     4. | KPI           | Measure and store DApp adoption KPIs.                                                                                 |
+|     4. | KPI           | Measure and store basic stats on DApp user adoption                                                                   |
 |     5. | Tutorial      | We will publish a video tutorial that walks a user through the SCRTSybil WebApp instructing them on the new features. |
 
 ## Additional Information :heavy_plus_sign: :dart: :pushpin:
