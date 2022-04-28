@@ -36,7 +36,8 @@ How can one validate a user's financial pedigree while preserving their privacy?
 
 - **Improve risk indicators**: we will increase the output accuracy of the credit scoring model by returning `low` / `medium` / `high-risk` indicators on the scoring bin assigned to the user. For example, imagine a user qualified for a mini-loan ranging from USD 5-10K. This scoring bin is rather broad, and a user may be very well suited to receive a loan of USD 6K but may struggle to pay back a loan worth USD 9K. Thus, we'll develop three categories to assess the risk level for given users to receive their associated loans. The same user qualifying for USD 5-10K may be a low-risk user in receiving a USD 6K loan, yet a high-risk user for a USD 9K loan. Please find a preview of the [risk indicator](./images/risk_indicator.png).
 
-- **DApp Adoption KPIs**: we will track user adoption for SCRTsibyl. Since the DApp leverages a smart contract to write a score to the blockchain, the DApp leaves a virtual paper trail of all on-chain transactions associated with score calculation. For instance, each transaction sent to the contract originates from a particular Secret Network address. Counting the number of unique Secret Network addresses that submit transactions to the contract (i.e. if a particular address sends five transactions in a day, count them once) will provide a good estimate of the number of users interacting with the DApp. We commit to providing at least 2 KPI indicators. A sample list of adoption KPI indicators follows.
+- **DApp Adoption KPIs**: we will track user adoption for SCRTsibyl. How many service providers queried a score? How many users went through the entire flow to calculate their credit sore and publish it to Secret blockchain? Since the DApp leverages a smart contract to write a score to the blockchain, the DApp leaves a virtual paper trail of all on-chain transactions associated with score calculation. For instance, each transaction sent to the contract originates from a particular Secret Network address. Counting the number of unique Secret Network addresses that submit transactions to the contract (i.e. if a particular address sends five transactions in a day, count them once) will provide a good estimate of the number of users interacting with the DApp. 
+User adoption data can be retrieved by integrating with Google Analytics to monitor web traffic on https://www.secretsibyl.com/ and use cookies to track user's actions, by web scraping the Secret Network Block explorer, or by storing in the smart contract the number of Kepler addresses that interacted with it. We will use one (or more) of the approaches above, we commit to providing at least 2 KPI indicators: one for the applicant and one for the service provider. A sample list of possible adoption KPI indicators follows.
 
 | Indicator | Description        | Measure                                                                                           |
 | --------- | ------------------ | ------------------------------------------------------------------------------------------------- |
@@ -44,7 +45,9 @@ How can one validate a user's financial pedigree while preserving their privacy?
 | NU        | New Users          | Number of users storing their credit score to chain for the first time over a selected timeframe. |
 | DAU       | Daily Active Users | Number of unique Secret Network addresses that submit transactions to the contract.               |
 | UA        | User Adherence     | Number of returning users calculating their credit score repeatedly over time.                    |
-| ...       | ...                |                                                                                                   |
+| TQ        | Total Queries      | Total number of credit score queries performed by service providers.                              |
+| TP        | Total Providers    | Number of unique service providers that ever queried a credit score using a query permit.         |
+|    ...    |         ...        |                                               ...                                                 |
 
 ### Mockups
 
@@ -163,7 +166,7 @@ We would be willing to consider part payment (up to 50%) in SCRT, BTC or ETH. Th
 |     1. | Framework     | Implement Keplr wallet Login, personal info input, hover+select+OAuth2 in chosen validator                            |
 |     2. | UI Module     | Design the UI flow for retrieving the score history.                                                                  |
 |     3. | UI Module     | WebApp aesthetics and functionalitiy refinements.                                                                     |
-|     4. | KPI           | Measure and store basic stats on DApp user adoption                                                                   |
+|     4. | KPI           | Measure and store basic stats on DApp user adoption.                                                                  |
 |     5. | Tutorial      | We will publish a video tutorial that walks a user through the SCRTSybil WebApp instructing them on the new features. |
 
 ## Additional Information :heavy_plus_sign: :dart: :pushpin:
