@@ -36,8 +36,8 @@ How can one validate a user's financial pedigree while preserving their privacy?
 
 - **Improve risk indicators**: we will increase the output accuracy of the credit scoring model by returning `low` / `medium` / `high-risk` indicators on the scoring bin assigned to the user. For example, imagine a user qualified for a mini-loan ranging from USD 5-10K. This scoring bin is rather broad, and a user may be very well suited to receive a loan of USD 6K but may struggle to pay back a loan worth USD 9K. Thus, we'll develop three categories to assess the risk level for given users to receive their associated loans. The same user qualifying for USD 5-10K may be a low-risk user in receiving a USD 6K loan, yet a high-risk user for a USD 9K loan. Please find a preview of the [risk indicator](./images/risk_indicator.png).
 
-- **DApp Adoption KPIs**: we will track user adoption for SCRTsibyl. How many service providers queried a score? How many users went through the entire flow to calculate their credit sore and publish it to Secret blockchain? Since the DApp leverages a smart contract to write a score to the blockchain, the DApp leaves a virtual paper trail of all on-chain transactions associated with score calculation. For instance, each transaction sent to the contract originates from a particular Secret Network address. Counting the number of unique Secret Network addresses that submit transactions to the contract (i.e. if a particular address sends five transactions in a day, count them once) will provide a good estimate of the number of users interacting with the DApp. 
-There are many ways to track user adoption. Some of them are: integrating with Google Analytics to monitor web traffic on https://www.secretsibyl.com/ using Google Tag manager to track user's actions (e.g., publishing score to chain, quering a score). One can web scrape the Secret Network Block explorer or store in the smart contract the number of Kepler addresses that interacted with it. Using one (or more) of the approaches above, we commit to providing at least 2 KPI indicators: one for the applicant and one for the service provider. A sample list of possible adoption KPI indicators follows.
+- **DApp Adoption KPIs**: we will track user adoption for SCRTsibyl. How many service providers queried a score? How many users went through the entire flow to calculate their credit sore and publish it to Secret blockchain? Since the DApp leverages a smart contract to write a score to the blockchain, the DApp leaves a virtual paper trail of all on-chain transactions associated with score calculation. For instance, each transaction sent to the contract originates from a particular Secret Network address. Counting the number of unique Secret Network addresses that submit transactions to the contract (i.e. if a particular address sends five transactions in a day, count them once) will provide a good estimate of the number of users interacting with the DApp.
+  There are many ways to track user adoption. Some of them are: integrating with Google Analytics to monitor web traffic on https://www.secretsibyl.com/ using Google Tag manager to track user's actions (e.g., publishing score to chain, quering a score). One can web scrape the Secret Network Block explorer or store in the smart contract the number of Kepler addresses that interacted with it. Using one (or more) of the approaches above, we commit to providing at least 2 KPI indicators: one for the applicant and one for the service provider. A sample list of possible adoption KPI indicators follows.
 
 | Indicator | Description        | Measure                                                                                           |
 | --------- | ------------------ | ------------------------------------------------------------------------------------------------- |
@@ -47,7 +47,7 @@ There are many ways to track user adoption. Some of them are: integrating with G
 | UA        | User Adherence     | Number of returning users calculating their credit score repeatedly over time.                    |
 | TQ        | Total Queries      | Total number of credit score queries performed by service providers.                              |
 | TP        | Total Providers    | Number of unique service providers that ever queried a credit score using a query permit.         |
-|    ...    |         ...        |                                               ...                                                 |
+| ...       | ...                | ...                                                                                               |
 
 ### Mockups
 
@@ -73,7 +73,7 @@ As part of the strategy to gain traffic in the Secret Network, we are expanding 
 
 2. User experience: tracking credit history and selecting different loan currencies will enhance the whole experience by providing more control to user's own decisions.
 
-3. User loan range: refining the accuracy of the credit score will allow the initial P2P micro-lending loans to increase to up to USD 100,000.
+3. User loan range: refining the accuracy of the credit score will allow the initial P2P micro-lending loans to increase beyond the initial USD 25,000.
 
 As we expand to more users and improve model accuracy, we strengthen the credibility and robustness of the oracle.
 
