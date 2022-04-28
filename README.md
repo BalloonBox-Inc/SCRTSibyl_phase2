@@ -65,13 +65,13 @@ How can one validate a user's financial pedigree while preserving their privacy?
 
 ### Mockups
 
-![scrt sibyl image](./images/validators.png)
+![scrt sibyl image](https://github.com/BalloonBox-Inc/SCRTSibyl_phase2/blob/main/images/validators.png)
 
-![scrt sibyl image](./images/history_chart.png)
+![scrt sibyl image](https://github.com/BalloonBox-Inc/SCRTSibyl_phase2/blob/main/images/history_chart.png)
 
-![scrt sibyl image](./images/history_table.png)
+![scrt sibyl image](https://github.com/BalloonBox-Inc/SCRTSibyl_phase2/blob/main/images/history_table.png)
 
-![scrt sibyl image](./images/risk_indicator.png)
+![scrt sibyl image](https://github.com/BalloonBox-Inc/SCRTSibyl_phase2/blob/main/images/risk_indicator.png)
 
 ### Architecture and Components
 
