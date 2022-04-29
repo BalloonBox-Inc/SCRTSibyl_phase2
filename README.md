@@ -14,7 +14,7 @@ The oracle runs a credit score check on either the user's preferred bank account
 
 Throughout the process, users are in control of their own data, which is securely stored on-chain through the privacy-preserving Secret Network protocols. When users store their score on the chain, there are gas fees involved. In order to query their score they can do so one of two ways: `(1)` They create a query permit which would be generated off chain and therefore be costless; OR `(2)` they generate a permission key, which would be stored on chain and would cost gas fees. They can issue viewing keys or the permit queries to third party providers allowing them to query the user's score without any gas fees. If the user would like to revoke their permit queries or change their viewing key, they can do so by running a state-changing function in the smart contract at the cost of a gas fee.
 
-In `phase 2`, we want to both expand our use case including loans of +25K USD, but also increase user adoption by integrating with new data validators and allowing the u ser to self-select the loan currency. In this way, SCRTsibyl will cater to a wide loan range becoming an accessible dApp for an increasingly large pool of crypto investors.
+In `phase 2`, we want to both expand our use case including loans of +25K USD, but also increase user adoption by integrating with new data validators and allowing the user to self-select the loan currency. In this way, SCRTsibyl will cater to a wide loan range becoming an accessible dApp for an increasingly large pool of crypto investors.
 
 ## Problem / Solution
 
