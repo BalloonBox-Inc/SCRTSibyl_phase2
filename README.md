@@ -6,7 +6,7 @@
 
 Project name: **SCRTsibyl_phase2**
 
-SCRTSybil is an oracle for credit score checks developed through an initial Secret Network grant. This is an application to fund a `phase 2` expansion of SCRTsibyl through a second grant.
+SCRTSibyl is an oracle for credit score checks developed through an initial Secret Network grant. This is an application to fund a `phase 2` expansion of SCRTsibyl through a second grant.
 
 The SCRTsibyl dApp targets a specific use case: P2P micro-lending, namely facilitating lending and borrowing of microloans ranging between USD 1-25K. As such, the dApp is already able to compute credit scores, to validate users' credibility, and to determine the loan size (in USD) a user qualifies for.
 
